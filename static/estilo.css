@@ -1,0 +1,267 @@
+/* index */
+:root {
+  --cor-principal: #30657e;
+  --cor-fundo: #e6e4e1;
+  --cor-texto: #333;
+  --cor-hover: #1f4e64;
+  --borda: rgba(0, 0, 0, 0.05);
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --raio-borda: 10px;
+  --espaco: 1.5rem;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  overflow: hidden;
+  height: 100vh;
+}
+
+header {
+  background-color: #e6e4e1;
+  box-shadow: var(--sombra);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--cor-hover);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.code-tag {
+  margin-left: -150px;
+  position: relative;
+  bottom: 80px;
+  font-size: 1rem;
+  color: #7093a3;
+  font-family: monospace;
+}
+
+.nome img{
+  position: relative;
+  right: 170px;
+  bottom: 70px ;
+  width: 400px ;
+}
+
+.anos img{
+  position: relative;
+  top: 50px ;
+  left: 600px ;
+  width: 450px ;
+}
+
+.foto {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+}
+
+.foto img {
+  position: relative;
+  left: 290px ;
+  top: 1px;
+  height: 100vh;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 1px;
+  box-shadow: var(--sombra);
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foto img {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+/* sobre */
+.foto2 img {
+  position:relative;
+  bottom: 570px;
+  left: 1100px;
+  width: 250px;
+  border-radius: 10%;
+  border:5px solid #1f4e64;
+
+}
+
+.foto3 img{
+  position: relative;
+  bottom: 565px;
+  left:1100px;
+  width: 250px;
+  border-radius: 10%;
+  border:5px solid #1f4e64;
+}
+
+.textos{
+  font-size: 35px;
+  font-family: sans-serif;
+  position: relative;
+  bottom: 50px;
+  left: 50px;
+}
+
+.textos h1{
+  position: relative;
+  bottom: -25px;
+  color: #1f4e64;
+}
+
+/* especialidades */
+.especialidade img{
+  position: relative;
+  left: 940px;
+  top: -250px;
+  width: 560px;
+}
+
+.textos1{
+  font-size: 27px;
+  font-family: sans-serif;
+  position: relative;
+  bottom: -120px;
+  left: 50px;
+}
+
+.textos1 h2{
+  position: relative;
+  bottom: -25px;
+  color: #1f4e64;
+}
+
+/* projetos */
+.projeto {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    color: #1f4e64;
+}
+
+.carrossel-projetos {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+    padding: 40px 60px;
+    scroll-behavior: smooth;
+}
+
+.carrossel-projetos::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+/* contato */
+.contato{
+  font-size: 25px;
+  position: relative;
+  left: 640px;
+  bottom: -25px;
+  color: #1f4e64;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin-top: 150px;
+    flex-wrap: wrap;
+}
+
+.social-container a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.social-icon {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-container p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
